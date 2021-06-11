@@ -1,0 +1,28 @@
+.App{
+.row {
+  display: flex;
+  flex-direction: row;
+  .colNavbar{
+    width:8.33%;
+  }
+  .colDashboard{
+    width: 92.77%;
+  }
+}
+}
+
+@media (max-width:1000px ) {
+  .App{
+    .row {
+      display: flex;
+      flex-direction: column;
+      .colNavbar{
+        width:100%;
+
+      }
+      .colDashboard{
+        width: 100%;
+      }
+    }
+  }
+}
