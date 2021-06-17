@@ -4,8 +4,8 @@
   height: 100vh;
   background: #FF8E30;
   //background:#3CBAB8;
-  padding: 5px;
-  font-size: 16px;
+  padding: .5rem;
+  font-size: 1.8rem;
 }
 
 .navBar-logo{
@@ -39,7 +39,7 @@
     }
     .nav-text:hover{
       background: #fff;
-      border-radius: 15px;
+      border-radius: 1.5rem;
       .linkIcon,.linkTitle{
         color:#FF8E30;
         //color:#00A2A1;
@@ -72,7 +72,8 @@ svg:hover{
 }*/
 @media (max-width:1000px ) {
   .navBar{
-    height: 100px;
+    height: 20rem;
+    font-size: 3.6rem;
     .navBar-logo{
       display: none;
     }
@@ -80,11 +81,13 @@ svg:hover{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      svg{
+        font-size: 0.9em;
+      }
       .nav-text{
         margin:0;
       }
       li{
-        width: 80px;
         p{
           display: none;
         }
@@ -95,11 +98,11 @@ svg:hover{
 }
 
 
-@media (max-width: 1300px) {
+/*@media (max-width: 1300px) {
   .navBar-logo{
       p{
         display: none;
       }
     margin:3em 0 3em 0;
   }
-}
+}*/

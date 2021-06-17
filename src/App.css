@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+html{
+  font-size: 62.5%;
+}
 body{
   font-family:"Lato",sans-serif;
+  width: 100%;
+  overflow-x:hidden;
 }
 .row{
-  width: 100%;
+
 }
 .App {
-  width: 100vw;
-  overflow: hidden;
+
+
 }
 

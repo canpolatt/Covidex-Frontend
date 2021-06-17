@@ -15,8 +15,8 @@ function Navbar() {
             <ul>
                 {SidebarData.map((item,index)=>{
                     return(
-                        <Link to={item.path} className="linkClass">
-                        <li key={index} className={item.cName}>
+                        <Link key={index} to={item.path} className="linkClass">
+                        <li  className={item.cName}>
 
                                 <div className="linkIcon">
                                     {item.icon}

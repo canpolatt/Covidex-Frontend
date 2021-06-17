@@ -1,43 +1,57 @@
-
 body{
   background: #e5e5e5;
+  color: #383e42;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  li{
+    letter-spacing: .2rem;
+  }
 }
 .dashboardMainPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100%;
  .row1{
-   height: 50%;
+   //height: 50%;
    .cardsWrap{
-     height: auto;
      padding: 1.1rem;
+   h2{
+       font-size: 2.8rem;
+
+
+     }
      .cardsWrapInner{
+
        display: flex;
-       justify-content:space-around;
+       justify-content:space-evenly;
        flex-wrap: wrap;
        margin-bottom: 2rem;
        .card{
          //background: yellowgreen;
-         color:white;
-         background: linear-gradient(180deg, #37C3A4 0%, #4BC337 100%);
          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-         padding: 10px;
-         width:300px;
-         //height: 300px;
-         border-radius: 15px;
-         margin:0 5px 5px 5px;
-         //position: relative;
+         padding: 1.2rem;
+         width:35rem;
+         height: 25rem;
+         border-radius: 1.5rem;
+         margin:0 .5rem .5rem .5rem;
+         position: relative;
          .cardContent{
-           /*position: absolute;
+           position: absolute;
            top: 50%;
            left: 50%;
-           transform: translate(-50%,-50%);*/
+           transform: translate(-50%,-50%);
            h1,h2{
              text-align: center;
-             letter-spacing: 3px;
-
+             letter-spacing: .35rem;
            }
-
+            h1{
+              font-size:3rem;
+            }
            h2{
-             font-size: 40px;
+             font-size: 3rem;
 
            }
          }
@@ -47,35 +61,51 @@ body{
    }
  }
   .row2{
-    height: 50%;
+    //height: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     .card2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      //width: 45%;
+      animation: moveInOpacity 2s ease-in-out;
+      font-size: 2rem;
       padding: 1.5rem;
-      width: 50%;
-      p{
-        color:rgba(0, 0, 0, 0.6);
-        font-size: 1.8rem;
-        font-weight: bolder;
-      }
-      .recharts-wrapper{
-        .recharts-surface{
-          margin-top: -5rem;
-        }
-      }
-      .card2-sub{
-        margin-top: -10rem;
-        ul{
-          padding: 0;
-          display: flex;
+      border-radius: 1.5rem;
+      //height: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-          list-style-type: none;
-          li{
-            margin: 0 1rem;
+      .row4{
+        padding: 1rem;
+        .card6{
+          position: relative;
+          svg{
+
+            position: absolute;
+            width: 40rem;
+            height: 40rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
           }
+        }
+        .card7{
+          li{
+            display: flex;
+            align-items: center;
+
+            .box{
+              width: 1rem;
+              height: 1rem;
+              border: 1px solid black;
+              margin-right: .5rem;
+            }
+          };
+
+        }
+        h3{
+          //text-align: center;
+          margin-block-start:0;
 
         }
       }
@@ -84,11 +114,12 @@ body{
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 1.5rem;
     .row3{
       padding: 1rem;
       .card4{
-        height: 150px;
+        height: 15rem;
         border-radius: 1.5rem;
         background: linear-gradient(180deg, #FFB74C 0%, #FA9C4E 100%);
         display: flex;
@@ -99,8 +130,8 @@ body{
           color: white;
           text-align: center;
           font-weight: bold;
-          font-size: 25px;
-          letter-spacing: 3px;
+          font-size: 2.5rem;
+          letter-spacing: .3rem;
           //position: absolute;
           //top: 15%;
         }
@@ -109,20 +140,27 @@ body{
     .row3{
       padding: 1rem;
       .card5{
-        height: 200px;
+        height: 20rem;
         border-radius: 1.5rem;
         background: #fff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.25);
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+          width: 20rem;
+        }
         p{
           color:rgba(0, 0, 0, 0.6);
+          letter-spacing: .2rem;
           font-weight: bold;
-          font-size: 25px;
+          font-size: 2.3rem;
           text-align: center;
           span{
-            font-weight: 900;
+            font-weight: 700;
+            font-size:1.1em;
+            text-decoration: underline;
+            padding: .2rem;
             word-wrap: break-word;
             color: #FF7400;
           }
@@ -135,91 +173,85 @@ body{
 
   }
 }
-@media (max-width:1914px ) {
-  .dashboardMainPage{
-    .cardsWrap{
-      .cardsWrapInner{
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around;
-        flex-wrap: wrap;
-      }
-    }
-  }
 
+@media (max-width: 1698px) {
+    html{
+      font-size:55%;
+    }
 }
 
-@media (max-width:1400px ) {
-  .dashboardMainPage{
-    .cardsWrap{
-      h2{
-        text-align: center;
-      }
-      .cardsWrapInner{
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around;
-        flex-wrap: wrap;
-      }
-    }
-    .row2{
+@media (max-width: 1494px) {
 
+  html{
+    font-size:48%;
+  }
+}
+@media (max-width: 1302px) {
+  html{
+    font-size:45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h2{
+    text-align: center;
+  }
+  .row2{
+    flex-direction: column;
+    align-items: center;
+    .card2{
       flex-direction: column;
-      align-items: center;
-      margin-top: -5rem;
+
     }
   }
-  .dashboardMainPage .row1 .cardsWrap .cardsWrapInner .card {
-    width: 300px;
+  html{
+    font-size: 39%;
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
-  .dashboardMainPage{
-    .row2{
-      .card3{
-        .row3{
-          .card4{
-            svg{
-              display: none;
-            }
-          }
-          .card5{
-            img{
-              display: none;
-            }
-          }
-        }
-      }
-    }
+  img{
+    width: 13rem !important;
+  }
+  .card5 p{
+    padding: 1rem;
   }
 }
 
-/*@media (max-width:1000px ) {
-  .dashboardMainPage{
-    .row1{
-      height: 50%;
-      .cardsWrap{
-  .cardsWrapInner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .card{
-      width: 30rem;
-      font-size: 1rem;
-      .cardContent{
-        h1,h2{
-          text-align: center;
-        }
-        h2{
-          font-size: 20px;
-        }
-      }
-    }
+.orange{
+  background:#FFBB28;
+}
+.green{
+  background: #4BC337;
+}
+.total{
+  background: #fff;
+  color:#263980;
+}
+.active{
+  background: linear-gradient(180.15deg, #FF7400 0.13%, #FEC600 83.76%);
+  color:#fff;
+}
+.recovered{
+  background: linear-gradient(180deg, #37C3A4 0%, #4BC337 100%);
+  color:#fff;
+}
+.deaths{
+background: linear-gradient(180deg, #A01D11 0%, #EA3221 100%);
+  color:#fff;
+}
+
+
+@keyframes moveInOpacity{
+  /* We can specify what I want to happen in each moment of time of the animation.
+  So we start with 0% which is before the animation actually starts.
+  So this can also be called start. Then the finish is at 100%, which is when the animation finishes. */
+
+  0% { /* animation start // initial state*/
+    opacity: 0;
   }
-      }
-    }
+
+  100% {  /* animation finish // final state*/
+    opacity:1;
   }
-}*/
+}

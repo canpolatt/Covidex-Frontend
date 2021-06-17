@@ -4,7 +4,7 @@ import  '../Form.css'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,11 +21,17 @@ function RegisterForm() {
             resolver: yupResolver(schema)
         }
     );
+    const history=useHistory();
     const onSubmit = async (data) => {
         await axios.post("http://localhost:4000/api/doctors/add",data)
             .then(response => {
                if(response.data.success===true){
                    toast.success("✅ Başarıyla kayıt olundu!")
+                   setTimeout(function (){
+                       history.push({
+                           pathname:"/"
+                       })
+                   },1500)
 
                }
             })

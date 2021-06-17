@@ -15,7 +15,7 @@ function App() {
           <Route path="/register">
               <RegisterForm/>
           </Route>
-          <Route path="/dashboard">
+          <Route path="/dashboard" >
               <Dashboard/>
           </Route>
       </Switch>

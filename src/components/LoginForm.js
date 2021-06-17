@@ -3,7 +3,7 @@ import  '../Form.css'
 import {useForm} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import {Link} from "react-router-dom";
+import {Link,useHistory} from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,11 +20,19 @@ function LoginForm() {
             resolver:yupResolver(schema),
         }
     );
+    const history=useHistory();
     const onSubmit=async(data)=> {
         await axios.post("http://localhost:4000/api/authentication/login",data)
             .then(response => {
                 if(response.data.success===true){
-                    toast.success("✅ Başarıyla giriş yapıldı!")
+                    toast.success("✅ Başarıyla giriş yapıldı!");
+                    localStorage.setItem("id",response.data.data.id);
+                    setTimeout(function (){
+                        history.push({
+                            pathname:"/dashboard"
+                        })
+                    },1500)
+
                 }
                 else if(response.data.success===false){
                     toast.error("❌ "+response.data.message)
