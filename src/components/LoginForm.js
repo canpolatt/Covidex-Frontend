@@ -1,5 +1,4 @@
 import React from 'react';
-import  '../Form.css'
 import {useForm} from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -8,6 +7,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {ReactComponent as CovidIcon} from "../svgs/coronavirus_black_24dp (1).svg";
+import {setAuthorizationToken} from "../helpers/setAuthorizationToken"
 
 const schema = yup.object().shape({
     username:yup.string().required("Username required!"),
@@ -22,11 +22,15 @@ function LoginForm() {
     );
     const history=useHistory();
     const onSubmit=async(data)=> {
-        await axios.post("http://localhost:4000/api/authentication/login",data)
+        //await axios.post("http://localhost:4000/api/authentication/login",data)
+        await axios.post("http://localhost:4000/api/token/login",data)
             .then(response => {
-                if(response.data.success===true){
+                if(response.status===200){
+            
+                    console.log(response.data.token)
+                    localStorage.setItem("jwtToken", response.data.token);
+                    setAuthorizationToken(response.data.token);
                     toast.success("✅ Başarıyla giriş yapıldı!");
-                    localStorage.setItem("id",response.data.data.id);
                     setTimeout(function (){
                         history.push({
                             pathname:"/dashboard"
@@ -34,11 +38,9 @@ function LoginForm() {
                     },1500)
 
                 }
-                else if(response.data.success===false){
-                    toast.error("❌ "+response.data.message)
-                }
             })
             .catch(error => {
+                toast.error("❌ Kullanıcı adı veya şifre hatalı")
                 console.error(error)
             });
     };
@@ -74,6 +76,7 @@ function LoginForm() {
                 </p>
                 <button className='btn' type='submit'>Sign In</button>
                 <p className="subtext">You don't have an account? Sign up <Link to="/register" className="link">here</Link> </p>
+                
             </form>
         </div>
     );

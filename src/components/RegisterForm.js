@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios'
-import  '../Form.css'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -23,9 +22,9 @@ function RegisterForm() {
     );
     const history=useHistory();
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:4000/api/doctors/add",data)
+        await axios.post("http://localhost:4000/api/token/register",data)
             .then(response => {
-               if(response.data.success===true){
+               if(response.status===200){
                    toast.success("✅ Başarıyla kayıt olundu!")
                    setTimeout(function (){
                        history.push({

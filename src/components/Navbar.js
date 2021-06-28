@@ -1,19 +1,19 @@
 import React from 'react';
-import {SidebarData} from "./SidebarData";
+import {NavbarData} from "../static/NavbarData";
 import {Link} from "react-router-dom";
-import "../Navbar.scss"
 import {ReactComponent as CovidIcon} from "../svgs/coronavirus_black_24dp.svg";
 
 function Navbar() {
     return (
         <div className="navBar">
             <div className="navBar-logo">
+            
                 <p>covidex</p>
                 <CovidIcon/>
             </div>
             <div className="navBar-items">
             <ul>
-                {SidebarData.map((item,index)=>{
+                {NavbarData.map((item,index)=>{
                     return(
                         <Link key={index} to={item.path} className="linkClass">
                         <li  className={item.cName}>

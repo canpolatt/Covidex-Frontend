@@ -1,0 +1,33 @@
+// COLORS
+
+$color-primary-ligther:#FFB74C;
+$color-primary: #ff8e30;
+$color-primary-darker: #ff7400;
+$color-white: #fff;
+$color-black:#000;
+$color-grey:grey;
+$background: #e5e5e5;
+$color-text: #383e42;
+
+.orange {
+  background: #ffbb28;
+}
+.green {
+  background: #4bc337;
+}
+.total {
+  background: #fff;
+  color: #263980;
+}
+.active {
+  background: linear-gradient(180.15deg, #ff7400 0.13%, #fec600 83.76%);
+  color: #fff;
+}
+.recovered {
+  background: linear-gradient(180deg, #37c3a4 0%, #4bc337 100%);
+  color: #fff;
+}
+.deaths {
+  background: linear-gradient(180deg, #a01d11 0%, #ea3221 100%);
+  color: #fff;
+}

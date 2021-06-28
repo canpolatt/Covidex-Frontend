@@ -1,6 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import "../DashboardMainPage.scss"
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell } from  'recharts';
 import {ReactComponent as MaskIcon} from "../svgs/masks_black_24dp.svg";
 import HumanVector from "../images/output-onlinepngtools.png";
 import CovidStatsService from "../services/CovidStatsService"
@@ -42,7 +41,7 @@ function DashboardMainPage() {
                setTotalCase(result.data)
 
            })
-          covidStatsService
+        covidStatsService
             .getTurkeyCase().then((result)=>{
             setTurkeyTotalCase(result.data.Countries[177].TotalConfirmed)
             setTurkeyActiveCase(result.data.Countries[177].NewConfirmed)
@@ -56,8 +55,8 @@ function DashboardMainPage() {
 
     },[])
     const data=[
-        {name:"Recovered",value:totalCase-activeCase},
-        {name:"Active",value:activeCase}
+        {name:"Recovered",value:700},
+        {name:"Active",value:300}
     ]
     return (
         <div className="dashboardMainPage">

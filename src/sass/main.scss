@@ -1,0 +1,21 @@
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/button";
+@import "./components/form";
+@import "./components/link";
+@import "./components/navbar";
+
+@import "./layout/grid";
+
+@import "./pages/dashboard";
+@import "./pages/login";
+@import "./pages/patientregister";
+@import "./pages/patientinfo";
+@import "./pages/patientprotocol";

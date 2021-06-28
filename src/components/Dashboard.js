@@ -2,8 +2,9 @@ import React from 'react';
 import {Route,Switch} from "react-router-dom";
 import DashboardMainPage from "../pages/DashboardMainPage";
 import PatientRegister from "../pages/PatientRegister";
+import PatientSearch from '../pages/PatientSearch';
+import PatientProtocol from "../pages/PatientProtocol";
 import Navbar from "./Navbar";
-import "../Dashboard.scss"
 
 
 function Dashboard() {
@@ -25,6 +26,12 @@ function Dashboard() {
                     </Route>
                     <Route path="/dashboard/patientRegister">
                         <PatientRegister/>
+                    </Route>
+                    <Route path="/dashboard/patientSearch">
+                        <PatientSearch/>
+                    </Route>
+                    <Route path="/dashboard/patientProtocol">
+                        <PatientProtocol/>
                     </Route>
             </Switch>
                 </div>

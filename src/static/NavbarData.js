@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as GoIcons from "react-icons/go";
 
-export const SidebarData=[
+export const NavbarData=[
     {
         title:'Home',
         path:'/dashboard',
@@ -18,7 +18,7 @@ export const SidebarData=[
     },
     {
         title:'Search',
-        path:'/dashboard/patientregister',
+        path:'/dashboard/patientSearch',
         icon:<GoIcons.GoSearch/>,
         cName:'nav-text'
     },

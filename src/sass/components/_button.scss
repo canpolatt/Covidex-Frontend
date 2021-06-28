@@ -1,0 +1,15 @@
+.btn{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    background: $color-primary;
+    color:$color-white;
+    text-transform: uppercase;
+    border:none;
+    cursor:pointer;
+    border-radius: .5rem;
+}
+.btn:hover{
+    background: $color-primary-darker;
+    transition: all .5s ease-out;
+}
