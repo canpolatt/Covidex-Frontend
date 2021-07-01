@@ -6,6 +6,22 @@
 <img src="https://user-images.githubusercontent.com/61492486/121854666-21bfaf00-ccfb-11eb-95c5-fbe61e408b80.png" width="60px"></img>
 <img src="https://user-images.githubusercontent.com/61492486/121854786-4a47a900-ccfb-11eb-8cba-98b079caf3d6.png" width="70px"></img>
 
+# Project Overview
+
+## Login 
+![login_screen](https://user-images.githubusercontent.com/61492486/124124337-fb329f80-da80-11eb-8a69-515a9520c1c4.jpg)
+## Register 
+![register_screen](https://user-images.githubusercontent.com/61492486/124124354-fec62680-da80-11eb-83fd-37cf5bcff141.jpg)
+## Dashboard
+![dashboard_test](https://user-images.githubusercontent.com/61492486/124124359-008fea00-da81-11eb-90d7-606cd70f8b52.jpg)
+## Patient Register
+![patient_register_screen](https://user-images.githubusercontent.com/61492486/124124364-02f24400-da81-11eb-8f91-554e81fe8e2d.jpg)
+## Patient Search
+![patient_search](https://user-images.githubusercontent.com/61492486/124124368-04237100-da81-11eb-9c60-a584fc7a1904.jpg)
+## Create Appointment
+![create_an_appointment](https://user-images.githubusercontent.com/61492486/124124378-05ed3480-da81-11eb-8c43-b30ac3e21535.jpg)
+## Appointment List
+![appointments](https://user-images.githubusercontent.com/61492486/124124382-0685cb00-da81-11eb-86ab-75010e9f1034.jpg)
 
 
 
