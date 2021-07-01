@@ -1,0 +1,29 @@
+.tableContainer {
+  @include absolutePositioningCenter;
+  animation: moveInOpacity 2s ease-out;
+  text-align: center;
+  table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  th,
+  td {
+    font-size: 1.6rem;
+    background: white;
+    padding: 3rem;
+    svg {
+      color: #4ded30;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  th {
+    background: $color-primary;
+    color: white;
+  }
+  svg {
+    width: 7rem;
+    height: 7rem;
+    color: $color-primary;
+  }
+}

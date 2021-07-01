@@ -1,19 +1,18 @@
-  
-@mixin absolutePositioningCenter{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+@mixin absolutePositioningCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@mixin displayFlexAllCenter{
-    display:flex;
-    align-items: center;
-    justify-content:center;
+@mixin displayFlexAllCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@mixin displayFlexAlignCenterColumn{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
+@mixin displayFlexAlignCenterColumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

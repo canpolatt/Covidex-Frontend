@@ -1,6 +1,33 @@
 .patientProtocol {
-    h1 {
-      color: red;
+  @include absolutePositioningCenter;
+  text-align: center;
+  display: flex;
+  svg {
+    width: 5rem;
+    height: 5rem;
+    color: $color-primary;
+  }
+
+  form {
+    margin: 1rem;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    .patientInfo {
+      background: #fff;
+      border-radius: 15px;
+      padding: 0.5rem;
+      margin-top: 1rem;
+
+      span {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $color-grey;
+      }
+      img {
+        width: 20rem;
+      }
     }
   }
-  
+}

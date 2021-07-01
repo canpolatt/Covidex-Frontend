@@ -1,32 +1,26 @@
-.patientSearch{
-    @include absolutePositioningCenter;
-    text-align: center;
-    svg{
-      width:5rem;
-      height:5rem;
-      color:$color-primary;
-    }
-  
-    form{
-      .patientInfo {
-        background: #fff;
-        border-radius: 15px;
-        padding: .5rem;
-        margin-top:1rem;
-        span{
-          font-size:1.5em;
-          font-weight: 500;
-          color:$color-grey;
-        }
-        img{
-          width: 20rem;
-          
-        }
-      
+.patientSearch {
+  @include absolutePositioningCenter;
+  text-align: center;
+  svg {
+    width: 5rem;
+    height: 5rem;
+    color: $color-primary;
+  }
+
+  form {
+    .patientInfo {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-top: 1rem;
+      span {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $color-grey;
+      }
+      img {
+        width: 20rem;
       }
     }
-    
   }
-  
-  
-  
+}

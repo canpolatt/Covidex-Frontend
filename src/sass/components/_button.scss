@@ -1,15 +1,51 @@
-.btn{
-    width: 100%;
-    margin-top: 1rem;
-    padding: 1rem 4rem;
-    background: $color-primary;
-    color:$color-white;
-    text-transform: uppercase;
-    border:none;
-    cursor:pointer;
-    border-radius: .5rem;
+.btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: $color-primary;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
 }
-.btn:hover{
-    background: $color-primary-darker;
-    transition: all .5s ease-out;
+.btn:hover {
+  background: $color-primary-darker;
+  transition: all 0.5s ease-out;
+}
+
+.btn-green {
+  width: 75%;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: $color-white;
+  font-size: 1.6rem;
+}
+
+.btn-green:hover {
+  background: darken($color-green, 5%);
+  transition: all 0.5s ease-out;
+}
+
+.btn-red {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: $color-red;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.btn-red:hover {
+  background: darken($color-red, 5%);
+  transition: all 0.5s ease-out;
 }

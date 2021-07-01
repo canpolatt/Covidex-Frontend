@@ -1,26 +1,25 @@
-import './sass/main.scss';
-import {BrowserRouter as Router, Route,Switch} from "react-router-dom";
+import "./sass/main.scss";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import Dashboard from "./components/Dashboard";
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
-      <Router>
-    <div className="App">
-      <Switch>
+    <Router>
+      <div className="App">
+        <Switch>
           <Route exact path="/">
-              <LoginForm/>
+            <LoginForm />
           </Route>
           <Route path="/register">
-              <RegisterForm/>
+            <RegisterForm />
           </Route>
-          <PrivateRoute path="/dashboard" component={Dashboard} >        
-          </PrivateRoute>
-      </Switch>
-    </div>
-      </Router>
+          <PrivateRoute path="/dashboard" component={Dashboard}></PrivateRoute>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
